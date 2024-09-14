@@ -48,7 +48,12 @@ class City(BaseModel):
             str: A formatted string showing the class name, ID, and attributes
                  of the city instance.
         """
+        dt_repr = repr(self.created_at)
         return (
             f"[{self.__class__.__name__}] ({self.id}) "
-            f"Name: {self.name}, State ID: {self.state_id}"
+            f"'id': '{self.id}', "
+            f"'created_at': {dt_repr}, "
+            f"'updated_at': {dt_repr}, "
+            f"Name: {self.name}, "
+            f"State ID: {self.state_id}"
         )

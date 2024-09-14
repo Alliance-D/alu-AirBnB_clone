@@ -192,28 +192,17 @@ class HBNBCommand(cmd.Cmd):
             return False
         attribute_value = arg_list[3]
 
-        if attribute_value.isdigit():
-            if isinstance(attribute_value, float):
+        try:
+            # Attempt to convert to an appropriate type
+            if '.' in attribute_value:
                 attribute_value = float(attribute_value)
-            elif isinstance(attribute_value, int):
+            else:
                 attribute_value = int(attribute_value)
-
-        # update BaseModel 00c0c670-e5f3-4603-9aa1-3caca5ee0e75
-        # email "aibnb@mail.com"
+        except ValueError:
+            pass  # Keep as string if conversion fails
 
         obj = all_objects[object_key]
-        # check if the attribute exist already
-        if attribute_name in obj.to_dict():
-            attribute_original_type = type(obj[attribute_name])
-            attribute_value = attribute_original_type(attribute_value)
-
-            if attribute_original_type in {str, int, float}:
-                attribute_value = attribute_original_type(attribute_value)
-                obj[attribute_name] = attribute_value
-        # if it doesn’t exist we add it
-        else:
-            obj.__dict__.update({attribute_name: attribute_value})
-
+        obj.__dict__[attribute_name] = attribute_value
         storage.save()
 
 if __name__ == "__main__":

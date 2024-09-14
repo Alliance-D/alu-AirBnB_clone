@@ -71,4 +71,4 @@ class BaseModel:
             str: A formatted string showing the class name, ID, and attributes.
         """
         class_name = self.__class__.__name__
-        return f"[{class_name}] ({self.id}) {self.__dict__}"
+        return f"[{class_name}] ({self.id}) {self.to_dict()}"
