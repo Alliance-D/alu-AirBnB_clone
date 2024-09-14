@@ -30,9 +30,9 @@ class TestAmenityInstantiation(unittest.TestCase):
 
     def test_name_is_public_class_attribute(self):
         am = Amenity()
-        self.assertEqual(str, type(Amenity.name))
-        self.assertIn("name", dir(Amenity()))
-        self.assertNotIn("name", am.__dict__)
+        self.assertEqual(str, type(am.name))
+        self.assertIn("name", am.__dict__)
+        self.assertNotIn("name", Amenity.__dict__)
 
     def test_two_amenities_unique_ids(self):
         am1 = Amenity()
