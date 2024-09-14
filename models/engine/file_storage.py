@@ -13,8 +13,10 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class FileStorage:
-    """Serializes instances to a JSON file and deserializes JSON file to instances."""
+    """Serializes instances to a JSON file and deserializes JSON file to
+        instances."""
 
     __file_path = "file.json"
     __objects = {}
@@ -40,8 +42,8 @@ class FileStorage:
             with open(self.__file_path, 'r') as f:
                 obj_dict = json.load(f)
                 for key, value in obj_dict.items():
-                class_name = value['__class__']
-                if class_name in globals():
-                    self.__objects[key] = globals()[class_name](**value)
+                    class_name = value['__class__']
+                    if class_name in globals():
+                        self.__objects[key] = globals()[class_name](**value)
         except FileNotFoundError:
             pass
