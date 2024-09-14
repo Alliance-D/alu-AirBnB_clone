@@ -49,6 +49,6 @@ class City(BaseModel):
                  of the city instance.
         """
         return (
-            f"[{self.__class__.__name__}]({self.id}) "
+            f"[{self.__class__.__name__}] ({self.id}) "
             f"Name: {self.name}, State ID: {self.state_id}"
         )
