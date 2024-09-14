@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines the `Place` class, which serves as a blueprint for creating 
+This module defines the `Place` class, which serves as a blueprint for creating
 place/house objects within the application.
 """
 
@@ -11,8 +11,8 @@ class Place(BaseModel):
     """
     Represents a place or house within the application.
 
-    The `Place` class extends `BaseModel` and adds attributes specific to 
-    a place or house. This class is used to model various properties of 
+    The `Place` class extends `BaseModel` and adds attributes specific to
+    a place or house. This class is used to model various properties of
     accommodation in the system.
     """
 
@@ -37,7 +37,9 @@ class Place(BaseModel):
         attributes are initialized by the parent class `BaseModel`.
 
         Args:
-            *args: Variable length argument list (not used in this implementation).
-            **kwargs: Dictionary of keyword arguments to initialize the place attributes.
+            *args: Variable length argument list (not used in this
+                    implementation).
+            **kwargs: Dictionary of keyword arguments to initialize the place
+                        attributes.
         """
         super().__init__(*args, **kwargs)
