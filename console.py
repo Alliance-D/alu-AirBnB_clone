@@ -46,8 +46,7 @@ class HBNBCommand(cmd.Cmd):
         """Print help message for EOF command."""
         print("EOF signal to exit the program")
 
-    ### New Methods Added Below ###
-    
+
     def do_create(self, args):
         """
             Creates a new instance of a class,
