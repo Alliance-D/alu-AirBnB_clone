@@ -48,4 +48,7 @@ class City(BaseModel):
             str: A formatted string showing the class name, ID, and attributes
                  of the city instance.
         """
-        return f"[{self.__class__.__name__}]({self.id}) Name: {self.name},State ID: {self.state_id}"
+        return (
+            f"[{self.__class__.__name__}]({self.id}) "
+            f"Name: {self.name}, State ID: {self.state_id}"
+        )
