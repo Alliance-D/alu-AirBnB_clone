@@ -3,80 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" type="image/icon">
     <title>AirBnB</title>
 
     <link rel="stylesheet" href="styles/4-common.css">
     <link rel="stylesheet" href="styles/3-header.css">
     <link rel="stylesheet" href="styles/3-footer.css">
-    <link rel="stylesheet" href="styles/4-filters.css">
     <link rel="stylesheet" href="styles/6-filters.css">
-    <link rel="stylesheet" href="styles/7-places.css">
     <link rel="stylesheet" href="styles/8-places.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <div> <img src="images/logo (1).png" alt="logo"></div>
+    </header>
     <div class="container">
         <section class="filters">
             <div class="locations">
                 <h3> States</h3>
-                <h4>Choose a state and city</h4>
+                <h4>California, Arizona...</h4>
                 <ul class="popover">
                     <li>
-                        <h2>California</h2>
+                        <h2>Arizona:</h2>
                         <ul>
-                            <li>Los Angeles</li>
-                            <li>San Francisco</li>
+                            <li>Page</li>
+                            <li>Page2</li>
                         </ul>
                     </li>
                     <li>
-                        <h2>New York</h2>
+                        <h2>California:</h2>
                         <ul>
-                            <li>New York City</li>
-                            <li>Buffalo</li>
+                            <li>San Francisco</li>
+                            <li>Los Altos</li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div class="amenities">
                 <h3>Amenities</h3>
-                <h4>Select available amenities</h4>
+                <h4>Internet, Kitchen...</h4>
                 <ul class="popover">
-                    <li>Free Wi-Fi</li>
-                    <li>Parking</li>
-                    <li>Swimming Pool</li>
+                    <li>Internet</li>
+                    <li>TV</li>
+                    <li>Kitchen</li>
+                    <li>Iron</li>
                 </ul>
             </div>
-            <button type="button">Search</button>
+            <button>Search</button>
         </section>
 
         <section class="places">
             <h1>Places</h1>
-
             <!-- Place listing -->
             <article class="place">
-                <h2>Place 1</h2>
-
-                <!-- Price by night -->
-                <div class="price_by_night">
-                    $120
-                </div>
-
+                <h2>My home <span class="price_by_night">$80</span></h2>
                 <!-- Information section -->
                 <div class="information">
                     <div class="max_guest">
-                        <i class="icon"></i> 4 Guests
+                        <i class="icon"></i> 2 Guests
                     </div>
                     <div class="number_rooms">
-                        <i class="icon"></i> 2 Bedrooms
+                        <i class="icon"></i> 1 Bedrooms
                     </div>
                     <div class="number_bathrooms">
-                        <i class="icon"></i> 2 Bathrooms
+                        <i class="icon"></i> 1 Bathrooms
                     </div>
                 </div>
 
                 <!-- User section -->
                 <div class="user">
-                    Owner: <strong>John Doe</strong>
+                    Owner: <strong>John Lennon</strong>
                 </div>
 
                 <!-- Description section -->
@@ -85,28 +80,47 @@
                 </div>
             </article>
 
-            <!-- Another place listing -->
             <article class="place">
-                <h2>Place 2</h2>
-
-                <div class="price_by_night">
-                    $150
-                </div>
+                <h2>Tiny house <span class="price_by_night">$65</span></h2>
 
                 <div class="information">
                     <div class="max_guest">
-                        <i class="icon"></i> 5 Guests
+                        <i class="icon"></i> 4 Guests
                     </div>
                     <div class="number_rooms">
-                        <i class="icon"></i> 3 Bedrooms
+                        <i class="icon"></i> 2 Bedrooms
                     </div>
                     <div class="number_bathrooms">
-                        <i class="icon"></i> 2 Bathrooms
+                        <i class="icon"></i> 1 Bathrooms
                     </div>
                 </div>
 
                 <div class="user">
-                    Owner: <strong>Jane Smith</strong>
+                    Owner: <strong>Andrienne</strong>
+                </div>
+
+                <div class="description">
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                </div>
+            </article>
+
+            <article class="place">
+                <h2>A suite <span class="price_by_night">$180</span></h2>
+
+                <div class="information">
+                    <div class="max_guest">
+                        <i class="icon"></i> 4 Guests
+                    </div>
+                    <div class="number_rooms">
+                        <i class="icon"></i> 2 Bedrooms
+                    </div>
+                    <div class="number_bathrooms">
+                        <i class="icon"></i> 1 Bathrooms
+                    </div>
+                </div>
+
+                <div class="user">
+                    Owner: <strong>Andrienne</strong>
                 </div>
 
                 <div class="description">
